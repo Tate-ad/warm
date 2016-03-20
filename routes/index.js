@@ -5,7 +5,7 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
   return res.json({
-    hello: "world"
+    hello: "fanyontao"
   });
   res.render('index', { title: 'Express' });
 
