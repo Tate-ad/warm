@@ -9,11 +9,11 @@ echo '.. start node server use pm2 ..'
 pm2 start pm2.json
 
 if [ -e /etc/nginx/sites-available/warm ];then
-    echo '!!!remove old warm config'
+    echo '!!!remove old warm conf'
     rm -f /etc/nginx/sites-available/warm
     echo 'done'
 fi
-cp warm.confg /etc/nginx/sites-available/warm
+cp warm.conf /etc/nginx/sites-available/warm
 ln -sf /etc/nginx/sites-available/warm /etc/nginx/sites-enabled/warm
 
 service nginx restart
